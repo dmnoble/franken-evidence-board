@@ -1,4 +1,4 @@
-:root{
+:root {
   --text: #333333;
 
   /* sticky colors */
@@ -20,9 +20,17 @@
 }
 
 @keyframes blink {
-  0% {opacity: .25;}
-  50% {opacity: .75;}
-  100% {opacity: .25;}
+  0% {
+    opacity: .25;
+  }
+
+  50% {
+    opacity: .75;
+  }
+
+  100% {
+    opacity: .25;
+  }
 }
 
 body {
@@ -40,18 +48,18 @@ code {
     monospace;
 }
 
-.elementContent{
+.elementContent {
   width: 0;
   height: 0;
 }
 
-.itemWrapper{
+.itemWrapper {
   user-select: none;
-  position:absolute;
+  position: absolute;
   width: fit-content;
 }
 
-.itemActions{
+.itemActions {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
@@ -60,33 +68,36 @@ code {
   width: 100%;
 }
 
-.itemHolder{
-  position:relative;
+.itemHolder {
+  position: relative;
   border-radius: .2rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125);
-  overflow:hidden;
+  overflow: hidden;
 }
 
 /* Style*/
-.cursorGrabbing{
+.cursorGrabbing {
   cursor: grabbing;
 }
+
 /* styling for itemHolder when selected*/
-.selected_box{
+.selected_box {
   position: absolute;
   background-color: #74747425;
   outline: 3px solid gray;
   user-select: none;
 }
-.selected{
+
+.selected {
   outline: 3px solid rgb(0, 0, 0, 0.5);
 }
 
 /* selection ui for an item ie the color boxes on notes*/
-.icon{
+.icon {
   user-select: none;
 }
-.itemSelection{
+
+.itemSelection {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -97,32 +108,32 @@ code {
   user-select: none;
 }
 
-.noteItem{
+.noteItem {
   z-index: var(--layer-item);
-  background:var(--yellow);
-  padding:20px;
+  background: var(--yellow);
+  padding: 20px;
   min-width: 120px;
-  min-height:25px;
+  min-height: 25px;
 
   background-size: contain;
   background-repeat: no-repeat;
-  overflow:auto;
-  overflow:hidden;
+  overflow: auto;
+  overflow: hidden;
 }
 
-.imgItem{
+.imgItem {
   /* border: 20px solid white; */
   z-index: var(--layer-item);
-  
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow:auto;
-  overflow:hidden;
+  overflow: auto;
+  overflow: hidden;
   aspect-ratio: 1/1;
 }
 
-.scrapItem{
+.scrapItem {
   background-color: white;
   font-size: xx-large;
   padding: 20px;
@@ -133,7 +144,7 @@ code {
 .itemHolder.selected .scrapItem:after {
   content: '\f1ce';
   position: absolute;
-  font-family: 'Material Symbols Outlined';
+  font-family: 'Special Elite';
   background: white;
   border: 1px solid;
   bottom: 0;
@@ -147,57 +158,57 @@ code {
   border-radius: 3px;
 }
 
-#boardWrapper{
-  width:100vw;
-  height:100vh;
+#boardWrapper {
+  width: 100vw;
+  height: 100vh;
 }
 
-#boardWrapper.cursorCard{
+#boardWrapper.cursorCard {
   cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAQAAAAZIo2TAAABfUlEQVQ4T4XRSyhEYRjG8f85Z85cOMYYgxKakZFbsVA2ykZZylZEucRKFqSsbVhThmLJ5DZnLjWDhVJCwkpZSNm4REkuC4zFJM7h4/m276+nrwcAwv+8DEyR0N/fksJIIVQzsbDy/CgmRLCbO2wsXt6IiRJB+0kCJ2dikqaT85OMbRyLScEy5ZhiZWBmW0zqlmhAMhKV1qG4mAyGaTcTC42NITEJ7zJuJgpV+bqYvDzZlnEbiYxLij79sUzrEh1GIpHGZPRQTK6u04NUGImdvq6YmCSTW3uOBTrxfiGVamfs/fUvdHGeGUSnFyVFFJzMrx78fnz/ENxvWrOEGMZn/E1LcdjYc3WrH/XEvTEpwRTd+NE+G1Kx4mF2dPPmbuc0sNO/XhvVEsSYZoRmKimhEA8O5O9ERqOGKBHmmGCINuopw4+PAvJwk4EdxTiohBU3XkoppQQfReSTixsn6dhQkc37p3rsuPCQTRZONBzYUFGQfjv+QipWVCzIyOLTD1m+18l/NWSvAAAAAElFTkSuQmCC) 11 10, auto;
 }
 
-#boardBackground{
+#boardBackground {
 
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
 
   /* background-image: radial-gradient(var(--darkergrey) .25vh, transparent 0); */
 }
 
-p{
-  margin:0;
+p {
+  margin: 0;
 }
 
-.svgHolder{
-  position:absolute;
+.svgHolder {
+  position: absolute;
   pointer-events: none;
-  opacity:0.65;
+  opacity: 0.65;
   z-index: var(--layer-lines);
 }
 
-.previewLine{
-  position:absolute;
+.previewLine {
+  position: absolute;
   z-index: var(--layer-ui);
 }
 
-.blink{
-  opacity:1;
-  animation-name:blink;
-  animation-duration:2s;
+.blink {
+  opacity: 1;
+  animation-name: blink;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
-.pin{
-  position:absolute;
+.pin {
+  position: absolute;
   user-select: none;
   pointer-events: none;
   z-index: var(--layer-ui);
 }
 
-#ui{
-  position:fixed;
-  left:0;
-  top:50%;
+#ui {
+  position: fixed;
+  left: 0;
+  top: 50%;
   transform: translateY(-50%);
   z-index: var(--layer-ui);
   margin-left: 10px;
@@ -206,7 +217,7 @@ p{
   gap: 10px;
 }
 
-.UIGroup{
+.UIGroup {
   padding: 5px;
   background-color: #fff;
   box-shadow: 0 2px 4px 0px #22242814;
@@ -217,9 +228,9 @@ p{
   gap: 5px;
 }
 
-.UIButton{
-  padding:10px;
-  display:flex;
+.UIButton {
+  padding: 10px;
+  display: flex;
   flex-direction: row;
   gap: 0.5rem;
   user-select: none;
@@ -227,12 +238,12 @@ p{
   cursor: pointer;
 }
 
-.UIButton svg{
+.UIButton svg {
   width: 24px;
   height: 24px;
 }
 
-.UITooltip{
+.UITooltip {
   position: absolute;
   left: 130%;
   top: 50%;
@@ -248,7 +259,7 @@ p{
   white-space: nowrap;
 }
 
-.UITooltip::before{
+.UITooltip::before {
   content: '';
   border: 8px solid transparent;
   position: absolute;
@@ -258,24 +269,25 @@ p{
   border-right-color: #222426;
 }
 
-.UIButton:hover{
+.UIButton:hover {
   background: #F1F2F5;
   border-radius: 8px;
 }
 
-.UIButton:not(.UIButtonSelect):hover .UITooltip{
+.UIButton:not(.UIButtonSelect):hover .UITooltip {
   display: flex;
 }
 
-.UIButton.UIButtonSelect{
+.UIButton.UIButtonSelect {
   background: #d9f5fb;
   border-radius: 8px;
 }
-.UIButton.UIButtonDisabled{
+
+.UIButton.UIButtonDisabled {
   opacity: 0.4;
 }
 
-.UIHotkeyGroup{
+.UIHotkeyGroup {
   display: flex;
   align-items: center;
   justify-content: center;
